@@ -1,0 +1,49 @@
+
+
+.row{
+  
+   
+    margin: 0 auto;
+    max-width: $col-width;
+    &:not(:last-child){
+        margin-bottom: $vertical-space;
+    }
+  
+    @include clearFixMethod;
+
+}
+
+[class^= "col"]{
+   
+    float: left;
+    &:not(:last-child){
+        margin-right:$space-between-block;
+    } 
+}
+
+.col-1-of-2{
+    width: calc((100% - #{$space-between-block})/2);
+
+}
+
+.col-1-of-3{
+    width: calc((100% - 2*#{$space-between-block})/3);
+}
+
+.col-2-of-3{
+    width: calc(2*((100% - 2*#{$space-between-block})/3) + #{$space-between-block});
+}
+
+.col-1-of-4{
+    width: calc((100% - 3*#{$space-between-block})/4);
+}
+
+.col-2-of-4 {
+    width: calc(2*((100% - 3*#{$space-between-block})/4) + #{ $space-between-block});
+}
+
+.col-3-of-4{
+    width: calc(3*((100% - 3*#{$space-between-block})/4) + 2*#{ $space-between-block});
+   
+}
+
